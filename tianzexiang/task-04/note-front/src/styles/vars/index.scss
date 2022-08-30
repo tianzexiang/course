@@ -1,0 +1,77 @@
+/**
+ * todo 所有变量
+ */
+
+/**
+ * 主题颜色
+ */
+
+$primary-color: #64CBFF;
+$text-primary-color: #333;
+$card-primary-color: #eeeff3;
+$text-info-color: #999;
+
+/**
+ * 字体大小
+ */
+@mixin text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@mixin text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@mixin text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+
+@mixin text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@mixin text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+
+// 特殊font 24px
+@mixin page-title-font {
+  font-size: 1.7rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+// 常用省略
+// 单行
+@mixin ellipsis_single {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 全局宽高变量
+$header-bar-height: 50px;
+// 分享页面padding
+$header-bar-height-share: 60px;

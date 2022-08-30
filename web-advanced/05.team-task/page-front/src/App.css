@@ -1,0 +1,10 @@
+.wrap {
+  max-width: 800px;
+  padding: 15px;
+  margin: auto;
+}
+.page {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,57 @@
+@use '../../../../styles/vars/index.scss' as globVars;
+
+.drawerWrapper {
+  color: globVars.$text-primary-color;
+  @include globVars.text-base;
+  padding: 0 10px;
+  height: 100%;
+  overflow: auto;
+}
+
+.header {
+  padding-top: 10px;
+  .iconWrapper {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover {
+      background-color: #e8e8e8;
+    }
+    .listIcon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 15px;
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      background-color: #e8e8e8;
+    }
+  }
+  .menuIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.active{
+  color: globVars.$primary-color;
+  background-color: #e8e8e8;
+}
+

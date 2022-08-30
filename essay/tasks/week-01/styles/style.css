@@ -1,0 +1,162 @@
+@import "./base.css";
+@import "./icon.css";
+
+#page_community {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  position: relative;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+.top > .title {
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.tabs {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2px 0 12px 0;
+}
+
+.tabs > ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ce2523;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+.tab-item {
+  flex: 1;
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.tab-item > .img {
+  width: 1rem;
+}
+
+.tab-active {
+  background-color: #bb2021;
+}
+
+.cats {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+.cat-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+.cat-list::-webkit-scrollbar {
+  display: none;
+}
+.cat-item {
+  background-color: #f7f7f7;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  white-space: nowrap;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.cat-active {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+.card-list {
+  padding: 15px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-sku {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.cover {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cover > .img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cover > .rank {
+  position: absolute;
+  width: 12%;
+  left: 0;
+  right: 0;
+}
+
+.outline {
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+.tags {
+  flex: 3;
+  display: flex;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag-item {
+  padding: 3px 5px;
+  background-color: #f7f7f7;
+  display: flex;
+  gap: 5px;
+  border-radius: 999px;
+}
+
+.tag-item > .img {
+  width: 20px;
+}
+.tag-item > .tag {
+  letter-spacing: 0.1rem;
+}
+
+.comment_favor {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  font-size: 0.75rem;
+  color: #b6b6b6;
+  justify-content: flex-end;
+  margin-right: 15px;
+  white-space: nowrap;
+  letter-spacing: .05rem;
+}

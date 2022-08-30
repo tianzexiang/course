@@ -1,0 +1,51 @@
+@use '../../../styles/vars/index.scss' as globVars;
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  background: #fff;
+  padding: 10px;
+  min-height: 60px;
+}
+
+.content {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.fileIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.moreIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.shareTag {
+  margin-left: 4px;
+  display: none;
+}
+.visible {
+  display: inline-block;
+}
+
+.title {
+  @include globVars.text-base();
+  @include globVars.ellipsis_single();
+  color: globVars.$text-primary-color;
+}
+
+.time {
+  @include globVars.text-xs();
+  @include globVars.ellipsis_single();
+  color: globVars.$text-info-color;
+}

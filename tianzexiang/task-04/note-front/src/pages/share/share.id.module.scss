@@ -1,0 +1,71 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.shareWrapper {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: globVars.$header-bar-height-share;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: globVars.$header-bar-height-share;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsla(0, 0%, 100%, 0.8);
+  box-shadow: 2px 0 5px 0 rgb(0 0 0 / 8%);
+  border-bottom: 1px solid #e5e6eb;
+  .banner {
+    font-family: Dosis;
+    font-weight: 700;
+    color: #4c5df2;
+    @include globVars.text-2xl();
+  }
+}
+
+.loggedIn, .notLoggedIn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentWrapper {
+  padding: 20px;
+  .contentTitle {
+    @include globVars.text-3xl();
+    font-weight: 700;
+    color: #1d2129;
+  }
+
+  .contentInfo {
+    display: flex;
+    min-height: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+    color: #909399;
+    .author {
+      flex: 8;
+    }
+    .views {
+      padding-top: 2px;
+      flex: 2;
+    }
+    .viewIcon {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
+  }
+
+  .content {
+    @include globVars.text-lg();
+  }
+}

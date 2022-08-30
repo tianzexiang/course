@@ -1,0 +1,51 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.loginWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: globVars.$primary-color;
+  :global(.adm-card) {
+    width: 80%;
+    min-height: 150px;
+    padding: 20px 10px;
+    max-width: 400px;
+    background-color: globVars.$card-primary-color;
+  }
+  :global(.adm-list.adm-list-card) {
+    margin: 0;
+  }
+  :global(.adm-list-body) {
+    background-color: inherit;
+  }
+  :global(.adm-list-body .adm-list-item) {
+    background-color: inherit;
+  }
+}
+
+.loginCardHeader {
+  color: globVars.$primary-color;
+  padding-top: 0;
+  .loginTitleWrapper {
+    @include globVars.text-3xl();
+  }
+  .toOtherForm{
+    color: globVars.$text-info-color;
+    @include globVars.text-xs();
+    cursor: pointer;
+    font-weight: lighter;
+    :global(.adm-space) {
+      --gap: 2px;
+    }
+  }
+}
+
+.divider {
+  background-color: #fff;
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  margin: 8px 0;
+}

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: icons;
+  src: url('./iconfont.woff2') format('woff2');
+}
+
+.iconfont {
+  font-family: icons;
+  font-style: normal;
+  font-weight: 400;
+  
+}
+
+
+
+.icon-pinglun:before {
+  content: "\e611";
+}
+
+.icon-dianzan:before {
+  content: "\ec7f";
+}
+.icon-arrowleft:before {
+  content: "\e631";
+}

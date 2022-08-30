@@ -1,0 +1,39 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.homeLayout {
+  height: 100%;
+  width: 100%;
+  background-color: globVars.$primary-color;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.homeHeader {
+  padding-top: 10px;
+}
+
+.iconWrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  &:hover {
+    background-color: #4a5a99;
+  }
+  .listIcon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.homeContent {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  overflow: auto;
+}

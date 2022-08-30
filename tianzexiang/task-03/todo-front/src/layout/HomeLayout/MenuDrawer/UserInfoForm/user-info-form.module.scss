@@ -1,0 +1,17 @@
+@use '../../../../styles/vars/index.scss' as globVars;
+
+.centerBtnWrapper {
+  display: flex;
+  justify-content: center;
+  :global(.adm-button) {
+    --border-radius: 999px;
+    background-color: globVars.$primary-color;
+    outline: none;
+    border: none;
+    @include globVars.text-base();
+  }
+  :global(.adm-space) {
+    --gap: 3px;
+  }
+}
+

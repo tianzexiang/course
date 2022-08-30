@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext", "dom"],
+    "sourceMap": true,
+    "outDir": "./scripts"
+  }
+}

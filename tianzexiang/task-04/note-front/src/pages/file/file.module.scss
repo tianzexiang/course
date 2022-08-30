@@ -1,0 +1,25 @@
+.fileWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.saveIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.quill {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  :global(.ql-container) {
+    flex: 1 1;
+    overflow: hidden;
+  }
+  :global(.ql-toolbar) {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+  }
+}

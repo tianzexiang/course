@@ -1,0 +1,41 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+
+.folderWrapper {
+  width: 100%;
+  height: 100%;
+}
+.hasPaddingTop {
+  padding-top: globVars.$header-bar-height;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: globVars.$header-bar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #fff;
+  @include globVars.text-lg();
+  .headerRight {
+    width: 16px;
+    background-color: transparent;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.bubble {
+  --initial-position-right: 20px;
+  --initial-position-bottom: 60px;
+  --background: #64cbff;
+  --z-index: 10;
+  font-size: 20px;
+}

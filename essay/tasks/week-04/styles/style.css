@@ -1,0 +1,178 @@
+@import "./base.css";
+
+.cover-wrap {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.cover-img {
+  width: 100%;
+  transition: all 0.75s;
+}
+.cover-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.cover-delete {
+  position: absolute;
+  opacity: 0;
+  width: 30%;
+  transform: scale(0.7);
+  transition: all 0.5s;
+}
+.cover-wrap:hover .cover-mask {
+  opacity: 0.2;
+}
+.cover-wrap:hover .cover-delete {
+  opacity: 1;
+  transform: scale(1);
+}
+.cover-wrap:hover .cover-img {
+  transform: scale(1.07);
+}
+
+.top {
+  position: fixed;
+  height: 68px;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.top .img {
+  height: 60%;
+}
+
+.fill {
+  height: 68px;
+}
+
+.main {
+  background-color: #f6f6f6;
+  min-height: calc(100vh - 68px);
+}
+
+.main .content {
+  max-width: 1200px;
+  padding: 0 20px 20px 20px;
+}
+
+.area-container {
+  overflow-x: scroll;
+  padding: 18px 0;
+}
+.area-container::-webkit-scrollbar {
+  display: none;
+}
+.area-list {
+  display: flex;
+  gap: 32px;
+  font-size: 12px;
+}
+.area-list .item {
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+.area-list .item:hover {
+  cursor: pointer;
+}
+
+
+
+.album-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+.album-list .item {
+  width: 100%;
+  min-width: 200px;
+}
+.album-list .cover-wrap {
+  margin-bottom: 20px;
+}
+.album-list .cover-wrap:hover {
+  cursor: pointer;
+}
+
+.album-list .item .content {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.album-list .item .name {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.album-list .item .name:hover {
+  color: var(--themo-color);
+  cursor: pointer;
+}
+
+.album-list .item .singer,
+.album-list .item .release-time {
+  color: #a3999a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.active {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+ 
+  .album-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .album-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .top {
+    position: static;
+    justify-content: flex-start;
+    margin-left: 120px;
+  }
+  .area-container{
+    position: static;
+  }
+  .fill {
+    display: none;
+  }
+  .album-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1380px) {
+ 
+  .album-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+}

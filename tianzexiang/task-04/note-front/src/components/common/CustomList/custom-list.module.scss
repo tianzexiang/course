@@ -1,0 +1,26 @@
+@use '../../../styles/vars/index.scss' as globalVars;
+
+.taskListWrapper {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  padding: 15px;
+  :global(.adm-pull-to-refresh),
+  :global(.adm-pull-to-refresh-content) {
+    width: 100%;
+    height: 100%;
+  }
+  :global(.adm-pull-to-refresh-content) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.hasMore {
+  color: globalVars.$primary-color;
+}
+
+.renderText {
+  color: globalVars.$primary-color;
+}

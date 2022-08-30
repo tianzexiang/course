@@ -1,0 +1,6 @@
+@use '../../styles//vars/index.scss' as globVars;
+
+.taskWrapper {
+  flex: 1 1;
+  overflow: auto;
+}

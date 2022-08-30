@@ -1,0 +1,31 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.iconWrapper {
+  display: inline-flex;
+  cursor: pointer;
+  .unfinishedIcon,
+  .finishedIcon {
+    width: 20px;
+    height: 20px;
+  }
+  .rateIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.iconWrapper.important,
+.iconWrapper.finished {
+  color: globVars.$primary-color;
+}
+
+.taskContentAdded {
+  flex: 1 1;
+  padding: 0 15px;
+  word-break: break-all; // 解决英文字母不换行
+}
+
+.taskContentAdded.finished {
+  color: #919191;
+  text-decoration: line-through;
+}

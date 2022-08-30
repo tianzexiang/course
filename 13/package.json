@@ -1,0 +1,21 @@
+{
+  "name": "feed_app",
+  "version": "1.0.0",
+  "description": "information app",
+  "scripts": {
+    "lint": "npx eslint --fix feed-front/src/** feed-server/src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.kscampus.io:10443/web-pre-2022-team-tasks/13.git"
+  },
+  "keywords": [
+    "information",
+    "webapp"
+  ],
+  "author": "13",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}

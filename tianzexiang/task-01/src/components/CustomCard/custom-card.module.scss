@@ -1,0 +1,12 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  background-color: globVars.$card-primary-color;
+  border-radius: 3px;
+  color: globVars.$text-primary-color;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 12px 10px;
+}

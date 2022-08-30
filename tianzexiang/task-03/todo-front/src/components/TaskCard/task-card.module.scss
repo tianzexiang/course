@@ -1,0 +1,44 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  background-color: globVars.$card-primary-color;
+  border-radius: 3px;
+  color: globVars.$text-primary-color;
+  padding: 12px 10px;
+  margin: 0 0 10px 0;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  cursor: pointer;
+  // color: ;
+  .unfinishedIcon,
+  .finishedIcon {
+    width: 20px;
+    height: 20px;
+  }
+  .rateIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.iconWrapper.important,
+.iconWrapper.finished {
+  color: globVars.$primary-color;
+}
+
+.taskContentAdded {
+  flex: 1 1;
+  padding: 0 15px;
+  word-break: break-all; // 解决英文字母不换行
+}
+
+.taskContentAdded.finished {
+  color: #919191;
+  text-decoration: line-through;
+}

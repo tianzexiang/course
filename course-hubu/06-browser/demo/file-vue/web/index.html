@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文件操作</title>
+    <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>选择文件上传</h1>
+      <p>
+        <input type="file" ref="uploadBtn" @change="handleUploadChange" />
+      </p>
+      <p>
+        <a v-show="file !== '' " :href="'/api/download?file=' + file"
+          >{{file}}</a
+        >
+      </p>
+      <h1>选择图片或文本文件打开</h1>
+      <p>
+        <input
+          type="file"
+          ref="openBtn"
+          @change="handleOpenChange"
+        />
+      </p>
+      <pre v-if="type === 'text'">{{content}}</pre>
+      <img v-else :src="content" alt="" />
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            file: '',
+            type: '',
+            content: ''
+          }
+        },
+        methods: {
+          // 选择的文件发生了变化
+          handleUploadChange: async function () {
+            let file = this.$refs.uploadBtn.files[0];
+            // 上传文件
+            let res = await fetch('/api/upload?name=' + encodeURIComponent(file.name), {
+              method: 'POST',
+              body: file
+            })
+            let result = await res.json()
+            if (result.stat === 'OK' && result.file !== '') {
+              this.file = result.file
+            }
+          },
+          // 读取文本
+          readText(file) {
+            let reader = new FileReader()
+            reader.onload = event => {
+              this.type = 'text'
+              this.content = event.target.result
+            }
+            reader.readAsText(file)
+          },
+          // 读取图片
+          readImage(file) {
+            let reader = new FileReader()
+            reader.onload = event => {
+              this.type = 'image'
+              this.content = event.target.result
+            }
+            reader.readAsDataURL(file)
+          },
+          // 选择的文件发生了变化
+          async handleOpenChange() {
+            let file = this.$refs.openBtn.files[0]
+            if (file.type && file.type.startsWith('text')) {
+              this.readText(file)
+            } else if (file.type.startsWith('image')) {
+              this.readImage(file)
+            } else {
+              alert('请选择图片或文本文件')
+            }
+          }
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+@mixin drawerBase {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin transitionSetting {
+  transition: all .2s ease-in-out;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.maskVisible {
+  opacity: 1;
+}
+
+.maskHidden {
+  opacity: 0;
+}
+
+
+
+.drawerWrapper {
+  z-index: 1000;
+  @include drawerBase();
+  @include transitionSetting(); // ! 注意因为visibility和opacity都是继承属性，所以想要有动画效果必须父元素也要加上transition
+}
+
+.mask {
+  background-color: rgba(0,0,0,.5);
+  z-index: 1001;
+  @include drawerBase();
+  @include transitionSetting();
+}
+
+.drawer {
+  position: absolute;
+  background-color: #fff;
+  z-index: 1002;
+  color: globVars.$text-primary-color;
+  overflow: hidden;
+  @include transitionSetting();
+}

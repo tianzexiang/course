@@ -1,0 +1,25 @@
+@use '../../../styles/vars/index.scss' as globVars;
+
+.sharePopup {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  gap: 20px;
+  :global(.adm-button) {
+    @include globVars.text-lg();
+  }
+}
+.shareTitle {
+  @include globVars.text-lg();
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.fileIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}

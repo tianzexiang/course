@@ -1,0 +1,7 @@
+@use '../../../styles/vars/index.scss' as globVars;
+
+.tabBarTextColor {
+  :global(.adm-tab-bar-item-active) {
+    color: globVars.$primary-color;
+  }
+}

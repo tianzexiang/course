@@ -1,0 +1,33 @@
+@use '../../styles/vars/index.scss' as globVars;
+
+.meWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+}
+
+.avatar {
+  --size: 60px;
+  img {
+    display: block !important; // 解决fallback导致display为none
+  }
+}
+
+.userInfo {
+  padding: 10px 5px 5px 5px;
+  color: globVars.$primary-color;
+  @include globVars.text-xl();
+  font-weight: bold;
+}
+
+.centerWrapper {
+  :global(.adm-form .adm-form-footer) {
+    padding-top: 0;
+  }
+}

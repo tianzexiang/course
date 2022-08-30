@@ -1,0 +1,37 @@
+@use '../../../styles/vars/index.scss' as globVars;
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  background-color: globVars.$card-primary-color;
+  border-radius: 3px;
+  color: globVars.$text-primary-color;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 12px 10px;
+}
+
+.taskInput {
+  background-color: transparent;
+  border: none;
+  color: globVars.$text-primary-color;
+  flex: 1 1;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include globVars.text-base;
+  caret-color: transparent;
+  &:focus {
+    caret-color: initial;
+  }
+
+  margin-left: 10px;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  .plusIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
